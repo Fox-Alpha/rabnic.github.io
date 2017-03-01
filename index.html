@@ -59,7 +59,8 @@
 					<h3 style="color: #111;" class="text-left">I am certain that you already know my name, but I'll tell you anyway, My name is Nicholas Doctor Rabalao, a recent graduate in Diploma: Information Technology at <a href="https://www.unisa.ac.za" target="_blank">UNISA</a>.</h3> 
 					<h3 style="color: #111;" class="text-left">I might not tell you which celeb recently engaged who or whose scandal is trending, but I will most likely tell you which web technology is on the rise or which language is resisting to die, why? cause my daily read newspaper is about web technologies.</h3>
 					<h3 style="color: #111;" class="text-left">I'm currently working on my own side-projects to keep my toolbox up-to-date.</h3>
-					<h4 style="color: #111;" class="text-center sleepy"><span>while</span>(sleepy)<span>{</span><br />fillUpCup();<br />drinkCoffee();<br /><span>}</span></h4>
+					<h4 style="color: #111;" class="text-center sleepy"><span>while</span>(stillLoveTechnology)<span>{</span><br />
+					findResources(current);<br />learnMore();<br /><span>}</span></h4>
 				</div>
 			</div>
 		</div>
@@ -76,20 +77,14 @@
 					<div class="col-sm-4 col-xs-12">
 						<div class="panel panel-info" onclick="window.open('http://github.com/rabnic/fav-website-list','_blank')">
 							<div class="panel-heading">
-								<div class="panel-title">Fav Websites List App</div>
+								<div class="panel-title">Fav Websites List</div>
 							</div>
 							<div class="panel-body fav-web">
+								<div class="description">
+									Web app to keep my favourite websites organised in one place. <br /> <br />
+									The app has a list of website categories and each category has its own list of websites.
+								</div>
 								<img src="img/fav-web-port.PNG" class="img-responsive">
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<div class="panel-title">Previous Portfolio</div>
-							</div>
-							<div class="panel-body prev-port">
-								<img src="img/pre-port.JPG" class="img-responsive">
 							</div>
 						</div>
 					</div>
@@ -98,30 +93,12 @@
 							<div class="panel-heading">
 								<div class="panel-title">Football Ticket Sale</div>
 							</div>
-							<div class="panel-body calc">
+							<div class="panel-body football-ticket">
+								<div class="description">
+									A simple Football Ticketing web app where users can order tickets and admin can manage orders. <br />
+									This app will developed using AngularJs Framework and in the process learn the core of the framework.
+								</div>
 								<img src="img/football-ticket.PNG" class="img-responsive">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4 col-xs-12">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<div class="panel-title">Athlete Club System</div>
-							</div>
-							<div class="panel-body prev-port">
-								<img src="img/athlete-vb-sys.JPG" class="img-responsive">
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<div class="panel-title">Football Club System</div>
-							</div>
-							<div class="panel-body fav-web">
-								<img src="img/fcms.JPG" class="img-responsive">
 							</div>
 						</div>
 					</div>
@@ -131,6 +108,10 @@
 								<div class="panel-title">Simple JS Calculator</div>
 							</div>
 							<div class="panel-body calc">
+								<div class="description">
+									A simple calculator developed with JavaScript. <br /> <br >
+									The app will be used as a tool to learn JavaScript Modularisation.
+								</div>
 								<img src="img/calc-port.JPG" class="img-responsive">
 							</div>
 						</div>
@@ -337,7 +318,15 @@
 
  		$('#intro h1').delay(200).animate({"font-size": "65px"},1500).animate({"font-size": "45px"},1500);
 
- 		//$('#intro h1').fadeOut(1000).fadeIn(1000).slideUp(1000).delay(500).slideDown(1000);
+ 		$("#portfolio .panel").hover(
+ 			function() {
+ 				$(this).find("img").slideUp();
+ 				$(this).find(".description").slideDown();
+ 			},
+ 			function() {
+ 				$(this).find(".description").slideUp();
+ 				$(this).find("img").fadeIn(500);
+ 			});
 
  		$('body').scrollspy({target : "#nav-bar", offset : 50});
  		// add smooth scroll
