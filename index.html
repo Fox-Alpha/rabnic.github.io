@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,10 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+	<!--[if lt IE 9]>\
+	<script src="js/IE/respond.js" type="text/javascript"></script>
+	<script src="js/IE/html5shiv.min.js" type="text/javascript"></script>
+	<! [endif] -->
 </head>
 <body id="page-top" data-spy="scroll" data-target="#nav-bar" >
 	
@@ -26,17 +30,17 @@
 		&equiv;
 		</button>
 		<ul id="nav-links">
-			<li><a a href="#about" class="page-scroll">About</a><hr /></li>
-			<li><a a href="#portfolio" class="page-scroll">Portfolio</a><hr /></li>
-			<li><a a href="#skills" class="page-scroll">Skills</a><hr /></li>
+			<li><a href="#about" class="page-scroll">About</a><hr /></li> 
+			<li><a href="#portfolio" class="page-scroll">Portfolio</a><hr /></li>
+			<li><a href="#skills" class="page-scroll">Skills</a><hr /></li>
 			<!--<li><a a href="#certs" class="page-scroll">Certs</a><hr /></li>-->
-			<li style="margin-right: 5px;"><a a href="#contact" class="page-scroll">Contact</a><hr /></li>
+			<li style="margin-right: 5px;"><a href="#contact" class="page-scroll">Contact</a><hr /></li>
 		</ul>
 	</nav>
 
 	<section id="intro" class="">
 		<div class="container">
-			<div class="row" style="margin-top: 100px;">
+			<div class="row" style="margin-top: 150px;">
 			 	<img src="img/me.jpg" alt="My face image" class="img-responsive img-circle">
 			 	<h1>Hi I'm <strong>Nicholas Rabalao</strong></h1>
 			 	<p>Flexible Web Developer</p>
@@ -80,7 +84,7 @@
 								<div class="panel-title">Fav Websites List</div>
 							</div>
 							<div class="panel-body fav-web">
-								<img src="img/fav-web-port.PNG" class="img-responsive">
+								<img src="img/fav-web-port.PNG" class="img-responsive" alt="fav-website-list app snapshot">
 								<div class="description">
 									Web app to keep my favourite websites organised in one place. <br /> <br />
 									The app has a list of website categories and each category has its own list of websites.
@@ -95,10 +99,10 @@
 								<div class="panel-title">Football Ticket Sale</div>
 							</div>
 							<div class="panel-body football-ticket">
-								<img src="img/football-ticket.PNG" class="img-responsive">
+								<img src="img/football-ticket.PNG" class="img-responsive" alt="football-ticket-sale app snapshot">
 								<div class="description">
-									A simple Football Ticketing web app where users can order tickets and admin can manage orders. <br />
-									This app will be developed using AngularJs Framework and in the process learn the core of the framework.
+									A simple Football Ticketing web app where users can purchase soccer tickets and admin can manage ticket sales. <br /><br />
+									This app is still in early development stage.
 								</div>
 								
 							</div>
@@ -110,7 +114,7 @@
 								<div class="panel-title">Simple JS Calculator</div>
 							</div>
 							<div class="panel-body calc">
-								<img src="img/calc-port.JPG" class="img-responsive">
+								<img src="img/calc-port.JPG" class="img-responsive" alt="javascript-calculator app snapshot">
 								<div class="description">
 									A simple calculator developed with JavaScript. <br /> <br >
 									The app will be used as a tool to learn JavaScript Modularisation.
@@ -132,8 +136,8 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.72">
-						<p>72%</p>
+					<div class="skill-rating text-center" data-value="0.70">
+						<p>70%</p>
 						<h3>HTML5</h3>
 					</div>	
 				</div>
@@ -158,14 +162,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.70">
-						<p>70%</p>
+					<div class="skill-rating text-center" data-value="0.65">
+						<p>65%</p>
 						<h3>Bootstrap</h3>
 					</div>	
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.60">
-						<p>60%</p>
+					<div class="skill-rating text-center" data-value="0.55">
+						<p>55%</p>
 						<h3>PHP/MySQL</h3>
 					</div>
 				</div>
@@ -178,13 +182,13 @@
 				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="skill-rating text-center" data-value="0.63">
 						<p>63%</p>
-						<h3>OOP | MVC</h3>
+						<h3>OOP | Git</h3>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--  --
+	<!--  
 	<section id="certs" class="">
 		<div class="container">
 			<div class="section-title text-center">
@@ -249,27 +253,27 @@
 			</div>
 			<div class="col-md-8 col-md-offset-2">
 				<h2 style="color:#FF6347; margin-top: 35px;">Drop me a message</h2>
-				<form action="https://formspree.io/rabalaond@gmail.com" name="sentMessage" id="contactForm" novalidate method="post">
+				<form action="https://formspree.io/rabalaond@gmail.com" name="sentMessage" id="contactForm" validate method="post" class="form">
 			        <div class="row">
 			          <div class="col-md-6">
 			            <div class="form-group">
-			              <input type="text" id="name" class="form-control" placeholder="Name" required="required" name="name">
+			              <input type="text" id="name" class="form-control" placeholder="Name" required="" name="name">
 			              <p class="help-block text-danger"></p>
 			            </div>
 			          </div>
 			          <div class="col-md-6">
 			            <div class="form-group">
-			              <input type="email" id="email" class="form-control" placeholder="Email" required="required" name="email">
+			              <input type="email" id="email" class="form-control" placeholder="Email" required="" name="email" validate="">
 			              <p class="help-block text-danger"></p>
 			            </div>
 			          </div>
 			        </div>
 			        <div class="form-group">
-			          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+			          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required=""></textarea>
 			          <p class="help-block text-danger"></p>
 			        </div>
 			        <div id="success"></div>
-			        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
+			        <button type="submit"  class="btn btn-default btn-lg">Send Message</button>
 		      </form>
 			</div>
 		</div>
@@ -321,15 +325,6 @@
 
  		$('#intro h1').delay(200).animate({"font-size": "65px"},1500).animate({"font-size": "45px"},1500);
 
- 		/*$("#portfolio .panel").hover(
- 			function() {
- 				$(this).find("img").animate({"width": "0", "height": "0"},1000);
- 				$(this).find(".description").animate({"width": "20px", "height": "20px"},1000);
- 			},
- 			function() {
- 				$(this).find(".description").animate({"width": "1", "height": "0"},1000);
- 				$(this).find("img").animate({"width": "inherit", "height": "inherit"},1000);
- 			});*/
 
  		$('body').scrollspy({target : "#nav-bar", offset : 50});
  		// add smooth scroll
