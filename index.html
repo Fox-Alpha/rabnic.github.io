@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
 	<title>Nicholas Rabalao | Web Developer</title>
-	<meta name="description" content="I will turn your ideas into reality. I’ am a freelance Croatian Web Developer and I’ am creating things that makes life easier, that simple and effective.">
+	<meta name="description" content="I will turn your ideas into reality. I’ am a Web Developer and I’ am creating things that makes life easier, that simple and effective.">
   	<meta name="keywords" content="web developer, Nicholas Rabalao, Rabalao, Nicholas, Nicholas Doctor Rabalao, RabNic, Web design, php developer,
 	php programmer, new website, frontend developer, beutifull web, developer portofolio, programmer portofolio,
 	beautiful web design, modern web design, web page, simple web page, database, student programmer, backend developer,
@@ -116,8 +116,7 @@
 							<div class="panel-body calc">
 								<img src="img/calc-port.JPG" class="img-responsive" alt="javascript-calculator app snapshot">
 								<div class="description">
-									A simple calculator developed with JavaScript. <br /> <br >
-									The app will be used as a tool to learn JavaScript Modularisation.
+									A simple calculator developed with JavaScript.
 								</div>
 								
 							</div>
@@ -142,20 +141,20 @@
 					</div>	
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.69">
-						<p>69%</p>
+					<div class="skill-rating text-center" data-value="0.60">
+						<p>60%</p>
 						<h3>CSS3</h3>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value=".67">
-						<p>67%</p>
+					<div class="skill-rating text-center" data-value=".65">
+						<p>65%</p>
 						<h3>JavaScript</h3>
 					</div>	
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.55">
-						<p>55%</p>
+					<div class="skill-rating text-center" data-value="0.65">
+						<p>65%</p>
 						<h3>JQuery</h3>
 					</div>
 				</div>
@@ -168,8 +167,8 @@
 					</div>	
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="skill-rating text-center" data-value="0.55">
-						<p>55%</p>
+					<div class="skill-rating text-center" data-value="0.66">
+						<p>66%</p>
 						<h3>PHP/MySQL</h3>
 					</div>
 				</div>
@@ -182,7 +181,7 @@
 				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="skill-rating text-center" data-value="0.63">
 						<p>63%</p>
-						<h3>OOP | Git</h3>
+						<h3>OOP/MVC</h3>
 					</div>
 				</div>
 			</div>
@@ -257,23 +256,23 @@
 			        <div class="row">
 			          <div class="col-md-6">
 			            <div class="form-group">
-			              <input type="text" id="name" class="form-control" placeholder="Name" required="" name="name">
+			              <input type="text" id="name" class="form-control" placeholder="Name" required name="name">
 			              <p class="help-block text-danger"></p>
 			            </div>
 			          </div>
 			          <div class="col-md-6">
 			            <div class="form-group">
-			              <input type="email" id="email" class="form-control" placeholder="Email" required="" name="email" validate="">
+			              <input type="email" id="email" class="form-control" placeholder="Email" required name="email" validate>
 			              <p class="help-block text-danger"></p>
 			            </div>
 			          </div>
 			        </div>
 			        <div class="form-group">
-			          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required=""></textarea>
+			          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
 			          <p class="help-block text-danger"></p>
 			        </div>
 			        <div id="success"></div>
-			        <button type="submit"  class="btn btn-default btn-lg">Send Message</button>
+			        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
 		      </form>
 			</div>
 		</div>
@@ -322,11 +321,13 @@
  	<script>
  		//
  		//$('#intro img').animate({left:500, opacity:"hide"},1500).animate({left:0, opacity:"show"},1500).delay(10000);
-
+ 		var body = document.getElementById("page-top");
+ 		if(body.scrollWidth > 681) {
  		$('#intro h1').delay(200).animate({"font-size": "65px"},1500).animate({"font-size": "45px"},1500);
-
+ 		}
 
  		$('body').scrollspy({target : "#nav-bar", offset : 50});
+ 		
  		// add smooth scroll
  		$("#nav-bar a").on("click", function(event) {
  			if(this.hash !== "") {
@@ -341,7 +342,8 @@
  		$(".nav-btn").click(function () {
      		 $("nav ul").slideToggle("slow");
     	});
-    	//
+
+    	// Responsive design - Change nav bar to mobile when width is small
     	$(window).resize(function (){
     		var bd = document.getElementById("page-top");
     		if(bd.scrollWidth > 681) {
@@ -353,6 +355,7 @@
  	</script>
  	<!-- -->
  	<script>
+ 		// Plugin- Circle Progress
  		var myScrollCount = {
  			count : 0
  		}
