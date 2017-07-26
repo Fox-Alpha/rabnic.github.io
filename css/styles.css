@@ -1,3 +1,8 @@
+@font-face {
+	font-family: SketchRockwell;
+	src: url('../fonts/SketchRockwell-Bold.ttf');
+}
+
 body {
             padding: 0;
             margin: 0;
@@ -12,8 +17,8 @@ body {
             position: relative;
         }
         #intro {
-            /*position: absolute;*/
-            top: 0;
+            /*position: absolute;/
+            top: 0;*/
             width: 100%;
             background: #5F9EA0;
             background: -webkit-linear-gradient(top, #5F9EA0,#FF7F50);
@@ -21,6 +26,8 @@ body {
             background: -ms-linear-gradient(top, #5F9EA0,#FF7F50);
             background: -o-linear-gradient(top, #5F9EA0,#FF7F50);
             background: linear-gradient(top, #5F9EA0,#FF7F50);
+            background: url('../img/header.jpg') no-repeat;
+            background-size: cover;
             background-position: center;
         }
         #intro img {
@@ -28,12 +35,38 @@ body {
             margin: 0px auto 0 auto;
             position: relative;
             display: block;
-            width: 180px !important;
-            height: 180px !important;
+            width: 200px !important;
+            height: 200px !important;
         }
         #intro h1 {
             font-size: 45px;
+			font-family: SketchRockwell, "cambria math";
         }
+        @keyframes opacify {
+            0% {
+                opacity: 0;
+                letter-spacing: 20px;
+            }
+            10% {
+                opacity: 1;
+                color: #FF7F50;
+                
+            }
+            80% {
+                color: #fff;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .greeting {
+            animation: opacify 3s ease-in-out;
+            animation-timing-function: ease-in-out;
+           /* -webkit-animation-duration: ;
+            -webkit-animation-timing-function: ;*/
+        }
+        
         #intro p {
             font-size: 18px;
         }
@@ -188,19 +221,26 @@ body {
         #portfolio .panel {
             height: 250px;
             border-radius: 10px;
+			box-shadow: 8px 8px 3px rgba(0,0,0,.3);
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
 
-            -webkit-transition: all .5s ease-in;
-            -moz-transition: all .5s ease-out;
-            -ms-transition: all .5s ease-out;
-            -o-transition: all .5s ease-out;
-            transition: all .5s ease-out;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
         }
         #portfolio .panel:hover  {
             border: thin solid #FF6347;
             box-shadow: 0 0 25px #FF6347;
             cursor: pointer;
+			
+			-webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
         } 
         /*
         #portfolio .panel:hover img {
@@ -297,11 +337,10 @@ body {
             cursor: pointer;
         }
 
-
         /* Footer */
         footer {
             position: absolute;
-            bottom: : 0;
+            /*bottom:  0;*/
             padding: 15px;
             width: 100%;
             background: rgba(0,0,0,.9);

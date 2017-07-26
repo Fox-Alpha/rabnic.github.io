@@ -17,6 +17,8 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+	<!-- Test Dome Certicates Stylesheets -->
+	<link rel="stylesheet" href="https://www.testdome.com/content/source/stylesheets/embed.css">
 	<!--[if lt IE 9]>\
 	<script src="js/IE/respond.js" type="text/javascript"></script>
 	<script src="js/IE/html5shiv.min.js" type="text/javascript"></script>
@@ -42,7 +44,7 @@
 		<div class="container">
 			<div class="row" style="margin-top: 150px;">
 			 	<img src="img/me.jpg" alt="My face image" class="img-responsive img-circle">
-			 	<h1>Hi I'm <strong>Nicholas Rabalao</strong></h1>
+			 	<h1 class="greeting">Hi I'm <strong>Nicholas Rabalao</strong></h1>
 			 	<p>Flexible Web Developer</p>
 			 	<a href="#about" class="btn btn-info btn-lg page-scroll">Learn More</a> 
 			 </div>
@@ -94,12 +96,12 @@
 						</div>
 					</div>
 					<div class="col-sm-4 col-xs-12">
-						<div class="panel panel-info">
+						<div class="panel panel-info" onclick="window.open('https://rabnic.github.io/quiz','_blank')">
 							<div class="panel-heading">
-								<div class="panel-title">Football Ticket Sale</div>
+								<div class="panel-title">Pogramming Quiz</div>
 							</div>
 							<div class="panel-body football-ticket">
-								<img src="img/football-ticket.PNG" class="img-responsive" alt="football-ticket-sale app snapshot">
+								<img src="img/quiz.PNG" class="img-responsive" alt="Programming quiz app snapshot">
 								<div class="description">
 									A simple Football Ticketing web app where users can purchase soccer tickets and admin can manage ticket sales. <br /><br />
 									This app is still in early development stage.
@@ -187,42 +189,42 @@
 			</div>
 		</div>
 	</section>
-	<!--  
+	<!--
 	<section id="certs" class="">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Online Certificates - Sharpen Skills</h2>
+				<h2>Online Skills Certificates</h2>
 				<hr />
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-sm-4 col-xs-6">
-					<div class="panel panel-primary">
-						<div class="panel-heading">The Heading</div>
-						<div class="panel-body"></div>
-					</div>
+					<a href="https://www.testdome.com/cert/y1msbfii2q" class="testdome-certificate-stamp gold">
+							<span class="testdome-certificate-name">Nicholas Rabalao</span>
+							<span class="testdome-certificate-test-name">PHP and MySQL </span>
+							<span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a>
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-6">
-					<div class="panel panel-primary">
-						<div class="panel-heading">The Heading</div>
-						<div class="panel-body"></div>
-					</div>
+					<a href="https://www.testdome.com/cert/y1msbfii2q" class="testdome-certificate-stamp gold">
+							<span class="testdome-certificate-name">Nicholas Rabalao</span>
+							<span class="testdome-certificate-test-name">JavaScript </span>
+							<span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a>
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-6">
-					<div class="panel panel-primary">
-						<div class="panel-heading">The Heading</div>
-						<div class="panel-body"></div>
-					</div>
+					<a href="https://www.testdome.com/cert/y1msbfii2q" class="testdome-certificate-stamp gold">
+							<span class="testdome-certificate-name">Nicholas Rabalao</span>
+							<span class="testdome-certificate-test-name">JQuery </span>
+							<span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a>
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-6">
-					<div class="panel panel-primary">
-						<div class="panel-heading">The Heading</div>
-						<div class="panel-body"></div>
-					</div>
+					<a href="https://www.testdome.com/cert/y1msbfii2q" class="testdome-certificate-stamp gold">
+							<span class="testdome-certificate-name">Nicholas Rabalao</span>
+							<span class="testdome-certificate-test-name">HTML5 and CSS3 </span>
+							<span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a>
 				</div>
 			</div>
 		</div>
-	</section> -->
-	<!--  -->
+	</section>
+	-->
 	<section id="contact" class="" style="min-height: 600px;">
 		<div class="container">
 			<div class="section-title text-center">
@@ -313,6 +315,14 @@
  				hr.style.transition = "width .5s ease-in";
 
  		}
+		 /* Test Dome Certifications badges
+		 var stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css", link = document.createElement("link"); 
+		 link.href = stylesheet, 
+		 link.type = "text/css", 
+		 link.rel = "stylesheet", 
+		 link.media = "screen,print", 
+		 document.getElementsByTagName("head")[0].appendChild(link);
+		 */// End Test Dome
  	</script>
  	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -322,9 +332,9 @@
  		//
  		//$('#intro img').animate({left:500, opacity:"hide"},1500).animate({left:0, opacity:"show"},1500).delay(10000);
  		var body = document.getElementById("page-top");
- 		if(body.scrollWidth > 681) {
+ 		/*if(body.scrollWidth > 681) {
  		$('#intro h1').delay(200).animate({"font-size": "65px"},1500).animate({"font-size": "45px"},1500);
- 		}
+ 		}*/
 
  		$('body').scrollspy({target : "#nav-bar", offset : 50});
  		
